@@ -1,0 +1,11 @@
+<div class="side-list">
+  <div class="list-item" *ngFor="let item of listItems">
+    <div class="list-header">
+      <h3>{{ item.taskTitle }}</h3>
+      <span class="status" [ngClass]="{'status-low-risk': item.status === 'Complete', 'status-uncomplete': item.status === 'Uncomplete', 'status-unassigned': item.status === 'Needs Review'}">{{ item.status }}</span>
+    </div>
+    <p>From: {{ item.from }}</p>
+    <p>To: {{ item.to }}</p>
+    <p>Due Date: {{ item.dueDate }}</p>
+  </div>
+</div>

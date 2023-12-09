@@ -1,0 +1,11 @@
+
+.map-and-list-container {
+  display: flex;
+  gap: 10px 50px; 
+  height: 100vh; 
+}
+
+.map-container {
+  flex-grow: 1; 
+  height: 100%; 
+}

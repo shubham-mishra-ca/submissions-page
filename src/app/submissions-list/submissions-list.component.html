@@ -1,0 +1,43 @@
+<div class="submissions-page">
+    <div class="submissions-header">
+      <h1 class="submissions-title">Submissions</h1>
+      <div class="controls">
+        <app-search-bar></app-search-bar>
+        <app-dropdown formType="selectForm"></app-dropdown>
+        <app-dropdown formType="selectStatus"></app-dropdown>
+        <app-date-picker></app-date-picker>
+        <app-toggle-button #toggleBtn></app-toggle-button>
+        <app-export-button></app-export-button> 
+      </div>
+    </div>
+    <div class="table-responsive" *ngIf="toggleBtn.isListViewActive">
+      <table class="submissions-table">
+        <thead>
+          <tr>
+            <th>Task</th>
+            <th>Status</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Customer Address</th>
+            <th>Due Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let submission of submissions">
+            <td>{{ submission.task }}</td>
+            <td class="status" [ngClass]="getStatusClass(submission.status)" >
+              <span class="status-indicator"></span>{{ submission.status }}
+            </td>
+            <td>{{ submission.from }}</td>
+            <td>{{ submission.to }}</td>
+            <td>{{ submission.customerAddress }}</td>
+            <td>{{ submission.dueDate | date: 'MMM d, h:mm a' }}</td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+     <!-- Map view, shown when isListViewActive is false -->
+     <app-map-view *ngIf="!toggleBtn.isListViewActive"></app-map-view>
+  </div>
+  

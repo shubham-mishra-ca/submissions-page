@@ -1,0 +1,4 @@
+<div class="toggle-button">
+  <button [class.active]="!isListViewActive" (click)="toggleView('map')">Map</button>
+  <button [class.active]="isListViewActive" (click)="toggleView('list')">List</button>
+</div>
