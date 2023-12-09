@@ -45,7 +45,7 @@ export class MapViewComponent implements AfterViewInit {
     };
   
     this.markers.forEach(markerInfo => {
-      const marker = new google.maps.Marker({
+      new google.maps.Marker({
         position: new google.maps.LatLng(markerInfo.lat, markerInfo.lng),
         map: this.map,
         icon: icon, 

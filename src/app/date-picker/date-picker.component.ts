@@ -21,9 +21,9 @@ export class DatePickerComponent implements OnInit {
     return formatDate(today, 'yyyy-MM-dd', 'en-GB');
   }
 
-  onDateChange(event: Event): void {
-    const date = (event.target as HTMLInputElement).value;
-    const formattedDate = this.convertToDisplayFormat(date);
+  onDateChange(): void {
+
+    
   }
 
 
