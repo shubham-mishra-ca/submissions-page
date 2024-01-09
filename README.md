@@ -3,6 +3,8 @@
 ## Description
 This project is a one-page "Submissions" application based on a design from Figma. It's a front-end only implementation that displays a list of submissions, markers on a map, and dropdown menus. The application is built with Angular and integrates a map provider (Google Maps) to display markers.
 
+**Live Demo** : View a live demo of Submissions Page here: [Submissions Page Live](https://sub-page-puce.vercel.app/submissions)
+
 ## Screenshots
 
 Here are some screenshots from the project:
